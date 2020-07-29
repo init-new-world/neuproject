@@ -65,7 +65,7 @@ public class ScheduleConfigure {
 
         factory.setSchedulerName("FEBS_Scheduler");
         // 延时启动
-        factory.setStartupDelay(1);
+        factory.setStartupDelay(10);
         factory.setApplicationContextSchedulerContextKey("applicationContextKey");
         // 启动时更新己存在的 Job
         factory.setOverwriteExistingJobs(true);

@@ -1,0 +1,60 @@
+<style>
+    #febs-cheliang-detail #cheliang-img, #febs-cheliang-detail .cheliang-info {
+        display: inline-block;
+        float: left;
+        margin-left: 15px;
+    }
+
+    #febs-cheliang-detail #cheliang-info-wrapper {
+        margin: 0 0 1rem 0;
+        display: inline-block;
+    }
+
+    #febs-cheliang-detail .cheliang-info div {
+        margin: 10px 15px;
+        max-width: 19rem;
+    }
+
+    #febs-cheliang-detail #options-wrapper a {
+        padding: 4px 6px;
+        color: rgba(0, 0, 0, 0.65);
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+    }
+
+    #febs-cheliang-detail #options-wrapper a:hover {
+        color: #40a9ff;
+        border-color: #40a9ff;
+    }
+
+</style>
+<div class="layui-fluid" id="febs-cheliang-detail" lay-title="车辆信息">
+    <div id="cheliang-info-wrapper">
+        <div class="cheliang-info">
+            <div><span class="layui-icon layui-icon-user"></span> 车辆 ID：
+                [[${cheliang.FId}]]
+            </div>
+            <div><span class="layui-icon layui-icon-user"></span> 车型：
+                [[${cheliang.FType}]]
+            </div>
+            <div><span class="layui-icon layui-icon-user"></span> 颜色：
+                [[${cheliang.FColor}]]
+            </div>
+            <div><span class="layui-icon layui-icon-user"></span> 车重：
+                [[${cheliang.FWeight}]]
+            </div>
+            <div><span class="layui-icon layui-icon-user"></span> 生产日期：
+                [[${cheliang.FDate}]]
+            </div>
+            <div><span class="layui-icon layui-icon-user"></span> 最低价格：
+                [[${cheliang.FMinPrice}]]
+            </div>
+            <div><span class="layui-icon layui-icon-user"></span> 保养次数：
+                [[${cheliang.FCareCounts}]]
+            </div>
+            <div><span class="layui-icon layui-icon-user"></span> 订单状态：
+                [[${cheliang.FStatus}]]
+            </div>
+        </div>
+    </div>
+</div>

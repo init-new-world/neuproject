@@ -1,0 +1,261 @@
+<div class="layui-fluid layui-anim febs-anim" id="febs-cheliang" lay-title="车辆管理">
+    <div class="layui-row febs-container">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body febs-table-full">
+                    <form class="layui-form layui-table-form" lay-filter="cheliang-table-form">
+                        <div class="layui-row">
+                            <div class="layui-col-md10">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">车辆 ID</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FId" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">车型</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FType" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">车架号</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FStructNumber" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">车重</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="deadWeight" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">颜色</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="time" id="cheliang-manufactureDate" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">排量</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="lowestPrice" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">自重</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FWeight" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">生产日期</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FDate" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">涡轮增压</label>
+                                        <div class="layui-input-inline">
+                                            <select name="status">
+                                                <option value=""></option>
+                                                <option value="0">不存在</option>
+                                                <option value="1">存在</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">驱动类型</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FDrive" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">最低价格</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FMinPrice" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">汽车配件</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FPart" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">汽车保险</label>
+                                        <div class="layui-input-inline">
+                                            <select name="status">
+                                                <option value=""></option>
+                                                <option value="0">不存在</option>
+                                                <option value="1">存在</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">其他配件</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FOther" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label layui-form-label-sm">保养次数</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="FCareCounts" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2 layui-col-sm12 layui-col-xs12 table-action-area">
+                                <div class="layui-btn layui-btn-sm layui-btn-primary febs-button-blue-plain table-action" id="query">
+                                    <i class="layui-icon">&#xe848;</i>
+                                </div>
+                                <div class="layui-btn layui-btn-sm layui-btn-primary febs-button-green-plain table-action" id="reset">
+                                    <i class="layui-icon">&#xe79b;</i>
+                                </div>
+                                <div class="layui-btn layui-btn-sm layui-btn-primary table-action action-more">
+                                    <i class="layui-icon">&#xe875;</i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <table lay-filter="cheliangTable" lay-data="{id: 'cheliangTable'}"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="cheliang-status">
+    {{#
+    var status = {
+    0: {title: '未出售', color: 'green'},
+    1: {title: '已出售', color: 'volcano'}
+    }[d.status];
+    }}
+    <span class="layui-badge febs-bg-{{status.color}}">{{ status.title }}</span>
+</script>
+
+<script data-th-inline="none" type="text/javascript">
+    layui.use(['dropdown', 'jquery', 'laydate', 'form', 'table', 'febs', 'treeSelect'], function () {
+        var $ = layui.jquery,
+            laydate = layui.laydate,
+            febs = layui.febs,
+            form = layui.form,
+            table = layui.table,
+            treeSelect = layui.treeSelect,
+            dropdown = layui.dropdown,
+            $view = $('#febs-cheliang'),
+            $query = $view.find('#query'),
+            $reset = $view.find('#reset'),
+            $searchForm = $view.find('form'),
+            sortObject = {field: 'createTime', type: null},
+            tableIns,
+            manufactureDateFrom,
+            manufactureDateTo;
+
+        form.render();
+
+        initTable();
+
+        laydate.render({
+            elem: '#cheliang-manufactureDate',
+            range: true,
+            trigger: 'click'
+        });
+
+        dropdown.render({
+            elem: $view.find('.action-more'),
+            click: function (name, elem, event) {
+                var checkStatus = table.checkStatus('cheliangTable');
+                if (name === 'create') {
+                    febs.modal.open('新增车辆', 'cheliang/create', {
+                        btn: ['提交', '重置'],
+                        area: $(window).width() <= 750 ? '95%' : '50%',
+                        offset: '30px',
+                        yes: function (index, layero) {
+                            $('#cheliang-add').find('#submit').trigger('click');
+                        },
+                        btn2: function () {
+                            $('#cheliang-add').find('#reset').trigger('click');
+                            return false;
+                        }
+                    });
+                }
+            },
+            options: [{
+                name: 'create',
+                title: '新增车辆',
+                perms: 'cheliang:create'
+            }]
+        });
+
+        table.on('tool(cheliangTable)', function (obj) {
+            var data = obj.data,
+                layEvent = obj.event;
+            if (layEvent === 'detail') {
+                febs.modal.view('车辆信息', 'cheliang/detail/' + data.cheliangId, {
+                    area: $(window).width() <= 750 ? '95%' : '660px'
+                });
+            }
+        });
+
+        table.on('sort(cheliangTable)', function (obj) {
+            sortObject = obj;
+            tableIns.reload({
+                initSort: obj,
+                where: $.extend(getQueryParams(), {
+                    field: obj.field,
+                    order: obj.type
+                })
+            });
+        });
+
+        $query.on('click', function () {
+            var params = $.extend(getQueryParams(), {field: sortObject.field, order: sortObject.type});
+            tableIns.reload({where: params, page: {curr: 1}});
+        });
+
+        $reset.on('click', function () {
+            $searchForm[0].reset();
+            treeSelect.revokeNode('dept');
+            sortObject.type = 'null';
+            manufactureDateTo = null;
+            manufactureDateFrom = null;
+            tableIns.reload({where: getQueryParams(), page: {curr: 1}, initSort: sortObject});
+        });
+
+        function initTable() {
+            tableIns = febs.table.init({
+                elem: $view.find('table'),
+                id: 'cheliangTable',
+                url: ctx + 'cheliang/list',
+                cols: [[
+                    {type: 'checkbox'},
+                    {field: 'FId', title: '车辆ID', minWidth: 100},
+                    {field: 'FDate', title: '生产日期', minWidth: 180, sort: true},
+                    {field: 'FType', title: '车型'},
+                    {field: 'FColor', title: '颜色', minWidth: 165},
+                    {field: 'FWeight', title: '车重(KG)', minWidth: 180},
+                    {field: 'FMinPrice', title: '最低价格'},
+                    {field: 'FCareCounts', title: '剩余保养次数'},
+                    {field: 'FStatus', title: '状态', templet: '#cheliang-status'},
+                    {title: '操作', toolbar: '#cheliang-option', minWidth: 140}
+                ]]
+            });
+        }
+
+        function getQueryParams() {
+            var params = $searchForm.serializeJson();
+            var manufactureDate = params.time;
+            if (manufactureDate) {
+                manufactureDateFrom = manufactureDate.split(' - ')[0];
+                manufactureDateTo = manufactureDate.split(' - ')[1];
+            }
+            params.invalidate_ie_cache = new Date();
+            params.manufactureDateFrom = manufactureDateFrom;
+            params.manufactureDateTo = manufactureDateTo;
+            return params;
+        }
+    })
+</script>

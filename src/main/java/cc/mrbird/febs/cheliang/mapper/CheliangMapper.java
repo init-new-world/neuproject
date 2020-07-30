@@ -27,7 +27,7 @@ public interface CheliangMapper extends BaseMapper<Cheliang> {
      */
     <T> IPage<Cheliang> findCheliangDetailPage(Page<T> page, @Param("cheliang") Cheliang che);
 
-    long countUserDetail(@Param("cheliang") Cheliang che);
+    long countCheliangDetail(@Param("cheliang") Cheliang che);
 
     /**
      * 查找车辆详细信息

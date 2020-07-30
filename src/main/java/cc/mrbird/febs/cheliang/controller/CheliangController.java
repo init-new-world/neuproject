@@ -29,20 +29,17 @@ public class CheliangController extends BaseController {
     private final ICheliang che;
 
     @GetMapping
-    @RequiresPermissions("cheliang:view")
     public FebsResponse cheList(QueryRequest request, Cheliang che) {
-        Map<String, Object> dataTable = getDataTable(this.che.findCheliangs(request, che));
+        Map<String, Object> dataTable = getDataTable(this.che.findCheliangs(che,request));
         return new FebsResponse().success().data(dataTable);
     }
 
     @PostMapping
-    @RequiresPermissions("cheliang:add")
     @ControllerEndpoint(operation = "新增汽车车辆", exceptionMessage = "新增车辆失败")
-    public FebsResponse addChe(@Valid Cheliang user, String FStructNumber, Integer FCareCounts, String FColor,
-                               String FDrive, String FInsure, Integer FMinPrice, String FOther, String FPart, String FTurbo,
-                               String FType, Integer FWeight, String FVolume, Date FDate) {
-        this.che.createCheliang(user,FStructNumber,FCareCounts,FColor,FDrive, FInsure,FMinPrice,FOther,FPart,FTurbo,
-                FType, FWeight,FVolume,FDate);
+    public FebsResponse addChe(@Valid Cheliang user) {
+        this.che.createCheliang(user,user.getFStructNumber(),user.getFCareCounts(),user.getFColor(),user.getFDrive(), user.getFInsure(),
+                user.getFMinPrice(),user.getFOther(),user.getFPart(),user.getFTurbo(),
+                user.getFType(), user.getFWeight(),user.getFVolume(),user.getFDate());
         return new FebsResponse().success();
     }
 }

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.dingdan.DingdanMapper">
+    <sql id="countDingdanDetailSql" >
+        SELECT
+        COUNT(1)
+        FROM
+        t_order_list u
+        WHERE 1 = 1
+        <if test="dingdan.FId != null and dingdan.FId != ''">
+            AND u.f_id = #{dingdan.FId}
+        </if>
+        <if test="dingdan.FDate != null and dingdan.FDate != ''">
+            AND u.f_created_time = #{dingdan.FDate}
+        </if>
+        <if test="dingdan.FSalesmanId != null and dingdan.FSalesmanId != ''">
+            AND u.f_salesman_id = #{dingdan.FSalesmanId}
+        </if>
+        <if test="dingdan.FClientId != null and dingdan.FClientId != ''">
+            AND u.f_client_id = #{dingdan.FClientId}
+        </if>
+        <if test="dingdan.FPrice != null and dingdan.FPrice != ''">
+            AND u.f_sale_price = #{dingdan.FPrice}
+        </if>
+        <if test="dingdan.FStatus != null and dingdan.FStatus != ''">
+            AND u.f_status = #{dingdan.FStatus}
+        </if>
+        <if test="dingdan.FCarId != null and dingdan.FCarId != ''">
+            AND u.f_car_id = #{dingdan.FCarId}
+        </if>
+    </sql>
+
+    <sql id="findDingdanDetailSql">
+        SELECT
+        u.f_id,
+        u.f_created_time,
+        u.f_salesman_id,
+        u.f_client_id,
+        u.f_sale_price,
+        u.f_status,
+        u.f_car_id
+        FROM
+        t_order_list u
+        WHERE 1 = 1
+        <if test="dingdan.FId != null and dingdan.FId != ''">
+            AND u.f_id = #{dingdan.FId}
+        </if>
+        <if test="dingdan.FDate != null and dingdan.FDate != ''">
+            AND u.f_created_time = #{dingdan.FDate}
+        </if>
+        <if test="dingdan.FSalesmanId != null and dingdan.FSalesmanId != ''">
+            AND u.f_salesman_id = #{dingdan.FSalesmanId}
+        </if>
+        <if test="dingdan.FClientId != null and dingdan.FClientId != ''">
+            AND u.f_client_id = #{dingdan.FClientId}
+        </if>
+        <if test="dingdan.FPrice != null and dingdan.FPrice != ''">
+            AND u.f_sale_price = #{dingdan.FPrice}
+        </if>
+        <if test="dingdan.FStatus != null and dingdan.FStatus != ''">
+            AND u.f_status = #{dingdan.FStatus}
+        </if>
+        <if test="dingdan.FCarId != null and dingdan.FCarId != ''">
+            AND u.f_car_id = #{dingdan.FCarId}
+        </if>
+        GROUP BY
+        u.f_id,
+        u.f_created_time,
+        u.f_salesman_id,
+        u.f_client_id,
+        u.f_sale_price,
+        u.f_status,
+        u.f_car_id
+    </sql>
+
+    <select id="countDingdanDetail" parameterType="dingdan" resultType="long">
+        <include refid="countDingdanDetailSql"/>
+    </select>
+
+    <select id="findDingdanDetailPage" parameterType="dingdan" resultType="dingdan">
+        <include refid="findDingdanDetailSql"/>
+    </select>
+
+    <select id="findDingdanDetail" parameterType="dingdan" resultType="dingdan">
+        <include refid="findDingdanDetailSql"/>
+    </select>
+
+    <select id="findById" parameterType="integer" resultType="dingdan">
+        SELECT
+        u.f_id,
+        u.f_created_time,
+        u.f_salesman_id,
+        u.f_client_id,
+        u.f_sale_price,
+        u.f_status,
+        u.f_car_id
+        FROM
+        t_order_list u
+        WHERE  u.FId = #{FId}
+        GROUP BY
+            u.f_id,
+            u.f_created_time,
+            u.f_salesman_id,
+            u.f_client_id,
+            u.f_sale_price,
+            u.f_status,
+            u.f_car_id
+    </select>
+
+</mapper>

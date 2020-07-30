@@ -27,7 +27,7 @@ import java.util.Map;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("job")
+@RequestMapping("cheliang")
 @RequiredArgsConstructor
 public class CheliangController extends BaseController {
 

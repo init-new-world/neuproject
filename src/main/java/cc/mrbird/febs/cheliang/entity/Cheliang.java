@@ -23,8 +23,8 @@ import java.util.Date;
  * @author MrBird
  */
 @Data
-@TableName("t_user")
-@Excel("用户信息表")
+@TableName("t_car_list")
+@Excel("车辆信息表")
 public class Cheliang implements Serializable {
 
     private static final long serialVersionUID = -4352868070794165001L;

@@ -18,8 +18,8 @@ import java.util.Date;
  * @author MrBird
  */
 @Data
-@TableName("t_user")
-@Excel("用户信息表")
+@TableName("t_order_list")
+@Excel("订单信息表")
 public class Dingdan implements Serializable {
 
     private static final long serialVersionUID = -4352868070794165001L;

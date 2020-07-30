@@ -10,55 +10,49 @@
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">车辆 ID</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FId" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fid" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">车型</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FType" autocomplete="off" class="layui-input">
+                                            <input type="text" name="ftype" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">车架号</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FStructNumber" autocomplete="off" class="layui-input">
-                                        </div>
-                                    </div>
-                                    <div class="layui-inline">
-                                        <label class="layui-form-label layui-form-label-sm">车重</label>
-                                        <div class="layui-input-inline">
-                                            <input type="text" name="deadWeight" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fstructNumber" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">颜色</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="time" id="cheliang-manufactureDate" class="layui-input">
+                                            <input type="text" name="fcolor" id="cheliang-manufactureDate" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">排量</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="lowestPrice" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fminPrice" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">自重</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FWeight" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fweight" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">生产日期</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FDate" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fdate" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">涡轮增压</label>
                                         <div class="layui-input-inline">
-                                            <select name="FStatus">
+                                            <select name="fstatus">
                                                 <option value=""></option>
                                                 <option value="0">不存在</option>
                                                 <option value="1">存在</option>
@@ -68,25 +62,25 @@
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">驱动类型</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FDrive" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fdrive" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">最低价格</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FMinPrice" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fminPrice" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">汽车配件</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FPart" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fpart" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">汽车保险</label>
                                         <div class="layui-input-inline">
-                                            <select name="FInsure">
+                                            <select name="finsure">
                                                 <option value=""></option>
                                                 <option value="0">不存在</option>
                                                 <option value="1">存在</option>
@@ -96,13 +90,13 @@
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">其他配件</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FOther" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fother" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">保养次数</label>
                                         <div class="layui-input-inline">
-                                            <input type="text" name="FCareCounts" autocomplete="off" class="layui-input">
+                                            <input type="text" name="fcareCounts" autocomplete="off" class="layui-input">
                                         </div>
                                     </div>
                                 </div>
@@ -223,14 +217,14 @@
                 url: ctx + 'cheliang/list',
                 cols: [[
                     {type: 'checkbox'},
-                    {field: 'FId', title: '车辆ID', minWidth: 100, sort: true},
-                    {field: 'FDate', title: '生产日期', minWidth: 180},
-                    {field: 'FType', title: '车型'},
-                    {field: 'FColor', title: '颜色', minWidth: 165},
-                    {field: 'FWeight', title: '车重(KG)', minWidth: 180},
-                    {field: 'FMinPrice', title: '最低价格'},
-                    {field: 'FCareCounts', title: '剩余保养次数'},
-                    {field: 'FStatus', title: '状态', templet: '#cheliang-status'},
+                    {field: 'fid', title: '车辆ID', minWidth: 100, sort: true},
+                    {field: 'fdate', title: '生产日期', minWidth: 180},
+                    {field: 'ftype', title: '车型'},
+                    {field: 'fcolor', title: '颜色', minWidth: 165},
+                    {field: 'fweight', title: '车重(KG)', minWidth: 180},
+                    {field: 'fminPrice', title: '最低价格'},
+                    {field: 'fcareCounts', title: '保养次数'},
+                    {field: 'fstatus', title: '状态', templet: '#cheliang-status'},
                     {title: '操作', toolbar: '#cheliang-option', minWidth: 140}
                 ]]
             });

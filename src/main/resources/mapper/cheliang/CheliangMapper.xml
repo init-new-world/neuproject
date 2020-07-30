@@ -7,110 +7,110 @@
         FROM
         t_cheliang c
         WHERE 1 = 1
-        <if test="cheliang.FId != null and cheliang.FId != ''">
-            AND c.f_id = #{cheliang.FId}
+        <if test="cheliang.fid != null and cheliang.fid != ''">
+            AND c.f_id = #{cheliang.fid}
         </if>
-        <if test="cheliang.FType != null and cheliang.FType != ''">
+        <if test="cheliang.ftype != null and cheliang.ftype != ''">
             AND c.f_type = #{cheliang.FType}
         </if>
-        <if test="cheliang.FStructNumber != null and cheliang.FStructNumber != ''">
-            AND c.f_struct_number = #{cheliang.FStructNumber}
+        <if test="cheliang.fstructNumber != null and cheliang.fstructNumber != ''">
+            AND c.f_struct_number = #{cheliang.fstructNumber}
         </if>
-        <if test="cheliang.FColor != null and cheliang.FColor != ''">
-            AND c.f_color = #{cheliang.FColor}
+        <if test="cheliang.fcolor != null and cheliang.fcolor != ''">
+            AND c.f_color = #{cheliang.fcolor}
         </if>
-        <if test="cheliang.FVolume != null and cheliang.FVolume != ''">
-            AND c.f_volume = #{cheliang.FVolume}
+        <if test="cheliang.fvolume != null and cheliang.fvolume != ''">
+            AND c.f_volume = #{cheliang.fvolume}
         </if>
-        <if test="cheliang.FWeight != null and cheliang.FWeight != ''">
-            AND c.f_weight = #{cheliang.FWeight}
+        <if test="cheliang.fweight != null and cheliang.fweight != ''">
+            AND c.f_weight = #{cheliang.fweight}
         </if>
-        <if test="cheliang.FDate != null and cheliang.FDate != ''">
-            AND c.f_date = #{cheliang.FDate}
+        <if test="cheliang.fdate != null and cheliang.fdate != ''">
+            AND c.f_date = #{cheliang.fdate}
         </if>
-        <if test="cheliang.FTurbo != null and cheliang.FTurbo != ''">
-            AND c.f_turbo = #{cheliang.FTurbo}
+        <if test="cheliang.fturbo != null and cheliang.fturbo != ''">
+            AND c.f_turbo = #{cheliang.fturbo}
         </if>
-        <if test="cheliang.FDrive != null and cheliang.FDrive != ''">
-            AND c.f_turbo = #{cheliang.FDrive}
+        <if test="cheliang.fdrive != null and cheliang.fdrive != ''">
+            AND c.f_turbo = #{cheliang.fdrive}
         </if>
-        <if test="cheliang.FMinPrice != null and cheliang.FMinPrice != ''">
-            AND c.f_min_price = #{cheliang.FMinPrice}
+        <if test="cheliang.fminPrice != null and cheliang.fminPrice != ''">
+            AND c.f_min_price = #{cheliang.fminPrice}
         </if>
-        <if test="cheliang.FPart != null and cheliang.FPart != ''">
-            AND c.f_part = #{cheliang.FPart}
+        <if test="cheliang.fpart != null and cheliang.fpart != ''">
+            AND c.f_part = #{cheliang.fpart}
         </if>
-        <if test="cheliang.FInsure != null and cheliang.FInsure != ''">
-            AND c.f_insure = #{cheliang.FInsure}
+        <if test="cheliang.finsure != null and cheliang.finsure != ''">
+            AND c.f_insure = #{cheliang.finsure}
         </if>
-        <if test="cheliang.FOther != null and cheliang.FOther != ''">
-            AND c.f_other = #{cheliang.FOther}
+        <if test="cheliang.fother != null and cheliang.fother != ''">
+            AND c.f_other = #{cheliang.fother}
         </if>
-        <if test="cheliang.FCareCounts != null and cheliang.FCareCounts != ''">
-            AND c.f_care_counts = #{cheliang.FCareCounts}
+        <if test="cheliang.fcareCounts != null and cheliang.fcareCounts != ''">
+            AND c.f_care_counts = #{cheliang.fcareCounts}
         </if>
     </sql>
 
     <sql id="findCheliangDetailSql">
         SELECT
-        c.f_id FId,
-        c.f_type FType,
-        c.f_struct_number FStructNumber,
-        c.f_color FColor,
-        c.f_volume FVolume,
-        c.f_weight FWeight,
-        c.f_date FDate,
-        c.f_turbo FTurbo,
-        c.f_drive FDrive,
-        c.f_min_price FMinPrice,
-        c.f_part FPart,
-        c.f_insure FInsure,
-        c.f_other FOther,
-        c.f_care_counts FCareCounts
+        c.f_id fid,
+        c.f_type ftype,
+        c.f_struct_number fstructNumber,
+        c.f_color fcolor,
+        c.f_volume fvolume,
+        c.f_weight fweight,
+        c.f_date fdate,
+        c.f_turbo fturbo,
+        c.f_drive fdrive,
+        c.f_min_price fminPrice,
+        c.f_part fpart,
+        c.f_insure finsure,
+        c.f_other fother,
+        c.f_care_counts fcareCounts
         FROM
         t_cheliang c
         WHERE 1 = 1
-        <if test="cheliang.FId != null and cheliang.FId != ''">
-            AND c.f_id = #{cheliang.FId}
+        <if test="cheliang.fid != null and cheliang.fid != ''">
+            AND c.f_id = #{cheliang.fid}
         </if>
-        <if test="cheliang.FType != null and cheliang.FType != ''">
-            AND c.f_type = #{cheliang.FType}
+        <if test="cheliang.ftype != null and cheliang.ftype != ''">
+            AND c.f_type = #{cheliang.ftype}
         </if>
-        <if test="cheliang.FStructNumber != null and cheliang.FStructNumber != ''">
-            AND c.f_struct_number = #{cheliang.FStructNumber}
+        <if test="cheliang.fstructNumber != null and cheliang.fstructNumber != ''">
+            AND c.f_struct_number = #{cheliang.fstructNumber}
         </if>
-        <if test="cheliang.FColor != null and cheliang.FColor != ''">
-            AND c.f_color = #{cheliang.FColor}
+        <if test="cheliang.fcolor != null and cheliang.fcolor != ''">
+            AND c.f_color = #{cheliang.fcolor}
         </if>
-        <if test="cheliang.FVolume != null and cheliang.FVolume != ''">
-            AND c.f_volume = #{cheliang.FVolume}
+        <if test="cheliang.fvolume != null and cheliang.fvolume != ''">
+            AND c.f_volume = #{cheliang.fvolume}
         </if>
-        <if test="cheliang.FWeight != null and cheliang.FWeight != ''">
-            AND c.f_weight = #{cheliang.FWeight}
+        <if test="cheliang.fweight != null and cheliang.fweight != ''">
+            AND c.f_weight = #{cheliang.fweight}
         </if>
-        <if test="cheliang.FDate != null and cheliang.FDate != ''">
-            AND c.f_date = #{cheliang.FDate}
+        <if test="cheliang.fdate != null and cheliang.fdate != ''">
+            AND c.f_date = #{cheliang.fdate}
         </if>
-        <if test="cheliang.FTurbo != null and cheliang.FTurbo != ''">
-            AND c.f_turbo = #{cheliang.FTurbo}
+        <if test="cheliang.fturbo != null and cheliang.fturbo != ''">
+            AND c.f_turbo = #{cheliang.fturbo}
         </if>
-        <if test="cheliang.FDrive != null and cheliang.FDrive != ''">
-            AND c.f_turbo = #{cheliang.FDrive}
+        <if test="cheliang.fdrive != null and cheliang.fdrive != ''">
+            AND c.f_turbo = #{cheliang.fdrive}
         </if>
-        <if test="cheliang.FMinPrice != null and cheliang.FMinPrice != ''">
-            AND c.f_min_price = #{cheliang.FMinPrice}
+        <if test="cheliang.fminPrice != null and cheliang.fminPrice != ''">
+            AND c.f_min_price = #{cheliang.fminPrice}
         </if>
-        <if test="cheliang.FPart != null and cheliang.FPart != ''">
-            AND c.f_part = #{cheliang.FPart}
+        <if test="cheliang.fpart != null and cheliang.fpart != ''">
+            AND c.f_part = #{cheliang.fpart}
         </if>
-        <if test="cheliang.FInsure != null and cheliang.FInsure != ''">
-            AND c.f_insure = #{cheliang.FInsure}
+        <if test="cheliang.finsure != null and cheliang.finsure != ''">
+            AND c.f_insure = #{cheliang.finsure}
         </if>
-        <if test="cheliang.FOther != null and cheliang.FOther != ''">
-            AND c.f_other = #{cheliang.FOther}
+        <if test="cheliang.fother != null and cheliang.fother != ''">
+            AND c.f_other = #{cheliang.fother}
         </if>
-        <if test="cheliang.FCareCounts != null and cheliang.FCareCounts != ''">
-            AND c.f_care_counts = #{cheliang.FCareCounts}
+        <if test="cheliang.fcareCounts != null and cheliang.fcareCounts != ''">
+            AND c.f_care_counts = #{cheliang.fcareCounts}
         </if>
         GROUP BY
         c.f_id,
@@ -143,20 +143,20 @@
 
     <select id="findByNum" parameterType="string" resultType="cheliang">
         SELECT
-        c.f_id FId,
-        c.f_type FType,
-        c.f_struct_number FStructNumber,
-        c.f_color FColor,
-        c.f_volume FVolume,
-        c.f_weight FWeight,
-        c.f_date FDate,
-        c.f_turbo FTurbo,
-        c.f_drive FDrive,
-        c.f_min_price FMinPrice,
-        c.f_part FPart,
-        c.f_insure FInsure,
-        c.f_other FOther,
-        c.f_care_counts FCareCounts
+        c.f_id fid,
+        c.f_type ftype,
+        c.f_struct_number fstructNumber,
+        c.f_color fcolor,
+        c.f_volume fvolume,
+        c.f_weight fweight,
+        c.f_date fdate,
+        c.f_turbo fturbo,
+        c.f_drive fdrive,
+        c.f_min_price fminPrice,
+        c.f_part fpart,
+        c.f_insure finsure,
+        c.f_other fother,
+        c.f_care_counts fcareCounts
         FROM
         t_cheliang c
         WHERE  c.f_struct_number = #{FStructNumber}

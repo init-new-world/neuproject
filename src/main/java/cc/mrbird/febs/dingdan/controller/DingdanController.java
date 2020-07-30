@@ -1,9 +1,11 @@
-package cc.mrbird.febs.dingdan;
+package cc.mrbird.febs.dingdan.controller;
 
 import cc.mrbird.febs.common.annotation.ControllerEndpoint;
 import cc.mrbird.febs.common.controller.BaseController;
 import cc.mrbird.febs.common.entity.FebsResponse;
 import cc.mrbird.febs.common.entity.QueryRequest;
+import cc.mrbird.febs.dingdan.service.IDingdan;
+import cc.mrbird.febs.dingdan.entity.Dingdan;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authz.annotation.RequiresPermissions;

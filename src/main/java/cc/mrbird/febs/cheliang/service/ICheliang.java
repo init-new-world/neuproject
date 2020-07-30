@@ -1,5 +1,6 @@
-package cc.mrbird.febs.cheliang;
+package cc.mrbird.febs.cheliang.service;
 
+import cc.mrbird.febs.cheliang.entity.Cheliang;
 import cc.mrbird.febs.common.entity.QueryRequest;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;

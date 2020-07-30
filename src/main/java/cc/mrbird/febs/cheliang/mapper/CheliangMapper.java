@@ -1,7 +1,6 @@
-package cc.mrbird.febs.cheliang;
+package cc.mrbird.febs.cheliang.mapper;
 
-import cc.mrbird.febs.cheliang.Cheliang;
-import cc.mrbird.febs.system.entity.User;
+import cc.mrbird.febs.cheliang.entity.Cheliang;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

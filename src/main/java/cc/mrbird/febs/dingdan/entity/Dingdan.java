@@ -1,4 +1,4 @@
-package cc.mrbird.febs.dingdan;
+package cc.mrbird.febs.dingdan.entity;
 
 import cc.mrbird.febs.common.converter.TimeConverter;
 import com.baomidou.mybatisplus.annotation.IdType;

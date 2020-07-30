@@ -1,6 +1,7 @@
-package cc.mrbird.febs.dingdan;
+package cc.mrbird.febs.dingdan.service;
 
 import cc.mrbird.febs.common.entity.QueryRequest;
+import cc.mrbird.febs.dingdan.entity.Dingdan;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 

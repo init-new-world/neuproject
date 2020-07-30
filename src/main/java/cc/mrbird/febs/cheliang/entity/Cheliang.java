@@ -1,4 +1,4 @@
-package cc.mrbird.febs.cheliang;
+package cc.mrbird.febs.cheliang.entity;
 
 import cc.mrbird.febs.common.annotation.Desensitization;
 import cc.mrbird.febs.common.annotation.IsMobile;

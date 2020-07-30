@@ -7,132 +7,107 @@
         FROM
         t_car_list c
         WHERE 1 = 1
-        <if test="cheliang.id != null and cheliang.id != ''">
-            AND c.f_id = #{cheliang.id}
+        <if test="cheliang.FId != null and cheliang.FId != ''">
+            AND c.f_id = #{cheliang.FId}
         </if>
-        <if test="cheliang.type != null and cheliang.type != ''">
-            AND c.f_type = #{cheliang.type}
+        <if test="cheliang.FType != null and cheliang.FType != ''">
+            AND c.f_type = #{cheliang.FType}
         </if>
-        <if test="cheliang.struct != null and cheliang.struct != ''">
-            AND c.f_struct_number = #{cheliang.struct}
-        </if>
-        <if test="cheliang.type != null and cheliang.type != ''">
-            AND c.f_type = #{cheliang.type}
+        <if test="cheliang.FStructNumber != null and cheliang.FStructNumber != ''">
+            AND c.f_struct_number = #{cheliang.FStructNumber}
         </if>
     </sql>
 
-    <sql id="findUserDetailSql">
+    <sql id="findCheliangDetailSql">
         SELECT
-        u.user_id userId,
-        u.username,
-        u.email,
-        u.mobile,
-        u.status,
-        u.create_time createTime,
-        u.ssex sex,
-        u.dept_id deptId,
-        u.last_login_time lastLoginTime,
-        u.modify_time modifyTime,
-        u.description,
-        u.avatar,
-        d.dept_name deptName,
-        GROUP_CONCAT(r.role_id) roleId,
-        GROUP_CONCAT(r.ROLE_NAME) roleName
+        c.f_id,
+        c.f_type,
+        c.f_struct_number,
+        c.f_color,
+        c.f_volume,
+        c.f_weight,
+        c.f_date,
+        c.f_turbo,
+        c.f_drive,
+        c.f_min_price,
+        c.f_part,
+        c.f_insure,
+        c.f_other,
+        c.f_care_counts
         FROM
-        t_user u
-        LEFT JOIN t_dept d ON (u.dept_id = d.dept_id)
-        LEFT JOIN t_user_role ur ON (u.user_id = ur.user_id)
-        LEFT JOIN t_role r ON r.role_id = ur.role_id
+        t_car_list c
         WHERE 1 = 1
-        <if test="user.username != null and user.username != ''">
-            AND u.username = #{user.username}
+        <if test="cheliang.FId != null and cheliang.FId != ''">
+            AND c.f_id = #{cheliang.FId}
         </if>
-        <if test="user.deptId != null and user.deptId != ''">
-            AND d.dept_id = #{user.deptId}
+        <if test="cheliang.FType != null and cheliang.FType != ''">
+            AND c.f_type = #{cheliang.FType}
         </if>
-        <if test="user.sex != null and user.sex != ''">
-            AND u.ssex = #{user.sex}
-        </if>
-        <if test="user.status != null and user.status != ''">
-            AND u.status = #{user.status}
-        </if>
-        <if test="user.mobile != null and user.mobile != ''">
-            AND u.mobile = #{user.mobile}
-        </if>
-        <if test="user.createTimeFrom != null and user.createTimeFrom !=''">
-            And u.create_time &gt; #{user.createTimeFrom}
-        </if>
-        <if test="user.createTimeTo!= null and user.createTimeTo !=''">
-            And u.create_time &lt; #{user.createTimeTo}
+        <if test="cheliang.FStructNumber != null and cheliang.FStructNumber != ''">
+            AND c.f_struct_number = #{cheliang.FStructNumber}
         </if>
         GROUP BY
-            u.username,
-            u.user_id,
-            u.email,
-            u.mobile,
-            u.status,
-            u.create_time,
-            u.ssex,
-            u.dept_id,
-            u.last_login_time,
-            u.modify_time,
-            u.description,
-            u.avatar
+        c.f_id,
+        c.f_type,
+        c.f_struct_number,
+        c.f_color,
+        c.f_volume,
+        c.f_weight,
+        c.f_date,
+        c.f_turbo,
+        c.f_drive,
+        c.f_min_price,
+        c.f_part,
+        c.f_insure,
+        c.f_other,
+        c.f_care_counts
     </sql>
 
-    <select id="countUserDetail" parameterType="user" resultType="long">
-        <include refid="countUserDetailSql"/>
+    <select id="countCheliangDetail" parameterType="cheliang" resultType="long">
+        <include refid="countCheliangDetailSql"/>
     </select>
 
-    <select id="findUserDetailPage" parameterType="user" resultType="user">
-        <include refid="findUserDetailSql"/>
+    <select id="findCheliangDetailPage" parameterType="cheliang" resultType="cheliang">
+        <include refid="findCheliangDetailSql"/>
     </select>
 
-    <select id="findUserDetail" parameterType="user" resultType="user">
-        <include refid="findUserDetailSql"/>
+    <select id="findCheliangDetail" parameterType="cheliang" resultType="cheliang">
+        <include refid="findCheliangDetailSql"/>
     </select>
 
-    <select id="findByName" parameterType="string" resultType="user">
+    <select id="findByName" parameterType="string" resultType="cheliang">
         SELECT
-        u.user_id userId,
-        u.username,
-        u.email,
-        u.mobile,
-        u.password,
-        u.status,
-        u.create_time createTime,
-        u.ssex sex,
-        u.dept_id deptId,
-        u.last_login_time lastLoginTime,
-        u.modify_time modifyTime,
-        u.description,
-        u.avatar,
-        u.theme,
-        u.is_tab isTab,
-        d.dept_name deptName,
-        GROUP_CONCAT(r.role_id) roleId,
-        GROUP_CONCAT(r.ROLE_NAME) roleName
+        c.f_id,
+        c.f_type,
+        c.f_struct_number,
+        c.f_color,
+        c.f_volume,
+        c.f_weight,
+        c.f_date,
+        c.f_turbo,
+        c.f_drive,
+        c.f_min_price,
+        c.f_part,
+        c.f_insure,
+        c.f_other,
+        c.f_care_counts
         FROM
-        t_user u
-        LEFT JOIN t_dept d ON (u.dept_id = d.dept_id)
-        LEFT JOIN t_user_role ur ON (u.user_id = ur.user_id)
-        LEFT JOIN t_role r ON r.role_id = ur.role_id
-        WHERE  u.username = #{username}
+        t_car_list c
+        WHERE  c.f_struct_number = #{FStructNumber}
         GROUP BY
-            u.username,
-            u.user_id,
-            u.email,
-            u.mobile,
-            u.password,
-            u.status,
-            u.create_time,
-            u.ssex,
-            u.dept_id,
-            u.last_login_time,
-            u.modify_time,
-            u.description,
-            u.avatar,
-            u.theme,
-            u.is_tab
+            c.f_id,
+            c.f_type,
+            c.f_struct_number,
+            c.f_color,
+            c.f_volume,
+            c.f_weight,
+            c.f_date,
+            c.f_turbo,
+            c.f_drive,
+            c.f_min_price,
+            c.f_part,
+            c.f_insure,
+            c.f_other,
+            c.f_care_counts
     </select>
 </mapper>

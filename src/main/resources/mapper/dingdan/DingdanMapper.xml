@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cc.mrbird.febs.dingdan.DingdanMapper">
+<mapper namespace="cc.mrbird.febs.dingdan.mapper.DingdanMapper">
     <sql id="countDingdanDetailSql" >
         SELECT
         COUNT(1)
@@ -73,19 +73,19 @@
         u.f_car_id
     </sql>
 
-    <select id="countDingdanDetail" parameterType="dingdan" resultType="long">
+    <select id="countDingdanDetail" parameterType="Dingdan" resultType="long">
         <include refid="countDingdanDetailSql"/>
     </select>
 
-    <select id="findDingdanDetailPage" parameterType="dingdan" resultType="dingdan">
+    <select id="findDingdanDetailPage" parameterType="Dingdan" resultType="Dingdan">
         <include refid="findDingdanDetailSql"/>
     </select>
 
-    <select id="findDingdanDetail" parameterType="dingdan" resultType="dingdan">
+    <select id="findDingdanDetail" parameterType="Dingdan" resultType="Dingdan">
         <include refid="findDingdanDetailSql"/>
     </select>
 
-    <select id="findById" parameterType="integer" resultType="dingdan">
+    <select id="findById" parameterType="integer" resultType="Dingdan">
         SELECT
         u.f_id,
         u.f_created_time,
@@ -96,7 +96,7 @@
         u.f_car_id
         FROM
         t_order_list u
-        WHERE  u.FId = #{FId}
+        WHERE  u.f_Id = #{FId}
         GROUP BY
             u.f_id,
             u.f_created_time,

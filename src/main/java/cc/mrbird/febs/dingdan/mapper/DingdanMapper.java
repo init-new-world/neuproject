@@ -1,5 +1,6 @@
-package cc.mrbird.febs.dingdan;
+package cc.mrbird.febs.dingdan.mapper;
 
+import cc.mrbird.febs.dingdan.entity.Dingdan;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

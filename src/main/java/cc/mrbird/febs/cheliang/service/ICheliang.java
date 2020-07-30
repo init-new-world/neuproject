@@ -19,7 +19,7 @@ public interface ICheliang extends IService<Cheliang> {
      * @param che     车辆
      * @return 车辆分页数据
      */
-    IPage<Cheliang> findCheliangs(QueryRequest request, Cheliang che);
+    IPage<Cheliang> findCheliangs(Cheliang che,QueryRequest request);
 
     public Cheliang findCheliangs(String FStructNum);
 

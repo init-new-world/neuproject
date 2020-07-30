@@ -31,10 +31,10 @@ public class CheliangImpl extends ServiceImpl<CheliangMapper, Cheliang> implemen
     }
 
     @Override
-    public IPage<Cheliang> findCheliangs(QueryRequest request,Cheliang che) {
+    public IPage<Cheliang> findCheliangs(Cheliang che,QueryRequest request) {
         Page<Cheliang> page = new Page<>(request.getPageNum(), request.getPageSize());
         page.setSearchCount(false);
-        page.setTotal(baseMapper.countUserDetail(che));
+        page.setTotal(baseMapper.countCheliangDetail(che));
         SortUtil.handlePageSort(request, page, "FId", FebsConstant.ORDER_ASC, false);
         return this.baseMapper.findCheliangDetailPage(page,che);
     }

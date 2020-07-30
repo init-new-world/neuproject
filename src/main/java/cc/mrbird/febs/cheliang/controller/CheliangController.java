@@ -28,13 +28,13 @@ public class CheliangController extends BaseController {
 
     private final ICheliang che;
 
-    @GetMapping
+    @GetMapping("list")
     public FebsResponse cheList(QueryRequest request, Cheliang che) {
         Map<String, Object> dataTable = getDataTable(this.che.findCheliangs(che,request));
         return new FebsResponse().success().data(dataTable);
     }
 
-    @PostMapping
+    @PostMapping("create")
     @ControllerEndpoint(operation = "新增汽车车辆", exceptionMessage = "新增车辆失败")
     public FebsResponse addChe(@Valid Cheliang user) {
         this.che.createCheliang(user,user.getFStructNumber(),user.getFCareCounts(),user.getFColor(),user.getFDrive(), user.getFInsure(),

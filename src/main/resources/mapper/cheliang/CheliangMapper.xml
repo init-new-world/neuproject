@@ -53,20 +53,20 @@
 
     <sql id="findCheliangDetailSql">
         SELECT
-        c.f_id,
-        c.f_type,
-        c.f_struct_number,
-        c.f_color,
-        c.f_volume,
-        c.f_weight,
-        c.f_date,
-        c.f_turbo,
-        c.f_drive,
-        c.f_min_price,
-        c.f_part,
-        c.f_insure,
-        c.f_other,
-        c.f_care_counts
+        c.f_id FId,
+        c.f_type FType,
+        c.f_struct_number FStructNumber,
+        c.f_color FColor,
+        c.f_volume FVolume,
+        c.f_weight FWeight,
+        c.f_date FDate,
+        c.f_turbo FTurbo,
+        c.f_drive FDrive,
+        c.f_min_price FMinPrice,
+        c.f_part FPart,
+        c.f_insure FInsure,
+        c.f_other FOther,
+        c.f_care_counts FCareCounts
         FROM
         t_cheliang c
         WHERE 1 = 1
@@ -143,20 +143,20 @@
 
     <select id="findByNum" parameterType="string" resultType="cheliang">
         SELECT
-        c.f_id,
-        c.f_type,
-        c.f_struct_number,
-        c.f_color,
-        c.f_volume,
-        c.f_weight,
-        c.f_date,
-        c.f_turbo,
-        c.f_drive,
-        c.f_min_price,
-        c.f_part,
-        c.f_insure,
-        c.f_other,
-        c.f_care_counts
+        c.f_id FId,
+        c.f_type FType,
+        c.f_struct_number FStructNumber,
+        c.f_color FColor,
+        c.f_volume FVolume,
+        c.f_weight FWeight,
+        c.f_date FDate,
+        c.f_turbo FTurbo,
+        c.f_drive FDrive,
+        c.f_min_price FMinPrice,
+        c.f_part FPart,
+        c.f_insure FInsure,
+        c.f_other FOther,
+        c.f_care_counts FCareCounts
         FROM
         t_cheliang c
         WHERE  c.f_struct_number = #{FStructNumber}

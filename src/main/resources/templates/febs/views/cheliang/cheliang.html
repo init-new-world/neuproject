@@ -58,7 +58,7 @@
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">涡轮增压</label>
                                         <div class="layui-input-inline">
-                                            <select name="status">
+                                            <select name="FStatus">
                                                 <option value=""></option>
                                                 <option value="0">不存在</option>
                                                 <option value="1">存在</option>
@@ -86,7 +86,7 @@
                                     <div class="layui-inline">
                                         <label class="layui-form-label layui-form-label-sm">汽车保险</label>
                                         <div class="layui-input-inline">
-                                            <select name="status">
+                                            <select name="FInsure">
                                                 <option value=""></option>
                                                 <option value="0">不存在</option>
                                                 <option value="1">存在</option>
@@ -126,15 +126,6 @@
         </div>
     </div>
 </div>
-<script type="text/html" id="cheliang-status">
-    {{#
-    var status = {
-    0: {title: '未出售', color: 'green'},
-    1: {title: '已出售', color: 'volcano'}
-    }[d.status];
-    }}
-    <span class="layui-badge febs-bg-{{status.color}}">{{ status.title }}</span>
-</script>
 
 <script data-th-inline="none" type="text/javascript">
     layui.use(['dropdown', 'jquery', 'laydate', 'form', 'table', 'febs', 'treeSelect'], function () {
@@ -232,8 +223,8 @@
                 url: ctx + 'cheliang/list',
                 cols: [[
                     {type: 'checkbox'},
-                    {field: 'FId', title: '车辆ID', minWidth: 100},
-                    {field: 'FDate', title: '生产日期', minWidth: 180, sort: true},
+                    {field: 'FId', title: '车辆ID', minWidth: 100, sort: true},
+                    {field: 'FDate', title: '生产日期', minWidth: 180},
                     {field: 'FType', title: '车型'},
                     {field: 'FColor', title: '颜色', minWidth: 165},
                     {field: 'FWeight', title: '车重(KG)', minWidth: 180},

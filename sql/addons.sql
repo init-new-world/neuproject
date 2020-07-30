@@ -16,3 +16,15 @@ CREATE TABLE `t_cheliang`  (
                                `f_care_counts` int(10) NOT NULL COMMENT '保养次数',
                                PRIMARY KEY (`f_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '车辆表' ROW_FORMAT = Dynamic;
+
+DROP TABLE IF EXISTS `t_order_list`;
+CREATE TABLE `t_order_list`  (
+                                `f_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '订单ID',
+                                `f_created_time` datetime(0) NOT NULL COMMENT '订单日期',
+                                `f_salesman_id` bigint(20) NOT NULL COMMENT '销售员ID',
+                                `f_client_id` bigint(20) NOT NULL COMMENT '客户ID',
+                                `f_sale_price` bigint(20) NOT NULL COMMENT '价格',
+                                `f_status` int(10) NOT NULL COMMENT '状态',
+                                `f_car_id` bigint(20) NOT NULL COMMENT '汽车ID',
+                               PRIMARY KEY (`f_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '订单表' ROW_FORMAT = Dynamic;

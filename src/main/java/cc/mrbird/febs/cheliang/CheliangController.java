@@ -31,20 +31,20 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class CheliangController extends BaseController {
 
-    private final IJobService jobService;
+    private final ICheliang che;
 
     @GetMapping
-    @RequiresPermissions("job:view")
-    public FebsResponse jobList(QueryRequest request, Job job) {
-        Map<String, Object> dataTable = getDataTable(this.jobService.findJobs(request, job));
+    @RequiresPermissions("cheliang:view")
+    public FebsResponse jobList(QueryRequest request, Cheliang che) {
+        Map<String, Object> dataTable = getDataTable(this.che.findCheliangs(request, che));
         return new FebsResponse().success().data(dataTable);
     }
 
     @PostMapping
-    @RequiresPermissions("job:add")
-    @ControllerEndpoint(operation = "新增定时任务", exceptionMessage = "新增定时任务失败")
-    public FebsResponse addJob(@Valid Job job) {
-        this.jobService.createJob(job);
+    @RequiresPermissions("cheliang:add")
+    @ControllerEndpoint(operation = "新增汽车车辆", exceptionMessage = "新增车辆失败")
+    public FebsResponse addChe(@Valid Cheliang che) {
+        this.che.createCheliang(che,FStructNumber);
         return new FebsResponse().success();
     }
 }

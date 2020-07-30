@@ -35,7 +35,7 @@ public class CheliangImpl extends ServiceImpl<CheliangMapper, Cheliang> implemen
         Page<Cheliang> page = new Page<>(request.getPageNum(), request.getPageSize());
         page.setSearchCount(false);
         page.setTotal(baseMapper.countCheliangDetail(che));
-        SortUtil.handlePageSort(request, page, "FId", FebsConstant.ORDER_ASC, false);
+        SortUtil.handlePageSort(request, page, "f_id", FebsConstant.ORDER_ASC, false);
         return this.baseMapper.findCheliangDetailPage(page,che);
     }
 

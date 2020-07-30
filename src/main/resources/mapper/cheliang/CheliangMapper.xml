@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cc.mrbird.febs.cheliang">
+<mapper namespace="cc.mrbird.febs.cheliang.mapper.CheliangMapper">
     <sql id="countCheliangDetailSql" >
         SELECT
         COUNT(1)
         FROM
-        t_car_list c
+        t_cheliang c
         WHERE 1 = 1
         <if test="cheliang.FId != null and cheliang.FId != ''">
             AND c.f_id = #{cheliang.FId}
@@ -68,7 +68,7 @@
         c.f_other,
         c.f_care_counts
         FROM
-        t_car_list c
+        t_cheliang c
         WHERE 1 = 1
         <if test="cheliang.FId != null and cheliang.FId != ''">
             AND c.f_id = #{cheliang.FId}
@@ -133,8 +133,12 @@
         <include refid="countCheliangDetailSql"/>
     </select>
 
-    <select id="findCheliangs" parameterType="cheliang" resultType="cheliang">
-        <include refid="findCheliangsSql"/>
+    <select id="findCheliangDetailPage" parameterType="cheliang" resultType="cheliang">
+        <include refid="findCheliangDetailSql"/>
+    </select>
+
+    <select id="findCheliangDetail" parameterType="cheliang" resultType="cheliang">
+        <include refid="findCheliangDetailSql"/>
     </select>
 
     <select id="findByNum" parameterType="string" resultType="cheliang">
@@ -154,7 +158,7 @@
         c.f_other,
         c.f_care_counts
         FROM
-        t_car_list c
+        t_cheliang c
         WHERE  c.f_struct_number = #{FStructNumber}
         GROUP BY
             c.f_id,

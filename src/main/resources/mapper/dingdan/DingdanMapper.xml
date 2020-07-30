@@ -7,26 +7,26 @@
         FROM
         t_order_list u
         WHERE 1 = 1
-        <if test="dingdan.FId != null and dingdan.FId != ''">
-            AND u.f_id = #{dingdan.FId}
+        <if test="dingdan.fid != null and dingdan.fid != ''">
+            AND u.f_id = #{dingdan.fid}
         </if>
-        <if test="dingdan.FDate != null and dingdan.FDate != ''">
-            AND u.f_created_time = #{dingdan.FDate}
+        <if test="dingdan.fdate != null and dingdan.fdate != ''">
+            AND u.f_created_time = #{dingdan.fdate}
         </if>
-        <if test="dingdan.FSalesmanId != null and dingdan.FSalesmanId != ''">
-            AND u.f_salesman_id = #{dingdan.FSalesmanId}
+        <if test="dingdan.fsalesmanId != null and dingdan.fsalesmanId != ''">
+            AND u.f_salesman_id = #{dingdan.fsalesmanId}
         </if>
-        <if test="dingdan.FClientId != null and dingdan.FClientId != ''">
-            AND u.f_client_id = #{dingdan.FClientId}
+        <if test="dingdan.fclientId != null and dingdan.fclientId != ''">
+            AND u.f_client_id = #{dingdan.fclientId}
         </if>
-        <if test="dingdan.FPrice != null and dingdan.FPrice != ''">
-            AND u.f_sale_price = #{dingdan.FPrice}
+        <if test="dingdan.fprice != null and dingdan.fprice != ''">
+            AND u.f_sale_price = #{dingdan.fprice}
         </if>
-        <if test="dingdan.FStatus != null and dingdan.FStatus != ''">
-            AND u.f_status = #{dingdan.FStatus}
+        <if test="dingdan.fstatus != null and dingdan.fstatus != ''">
+            AND u.f_status = #{dingdan.fstatus}
         </if>
-        <if test="dingdan.FCarId != null and dingdan.FCarId != ''">
-            AND u.f_car_id = #{dingdan.FCarId}
+        <if test="dingdan.fcarId != null and dingdan.fcarId != ''">
+            AND u.f_car_id = #{dingdan.fcarId}
         </if>
     </sql>
 
@@ -42,26 +42,26 @@
         FROM
         t_order_list u
         WHERE 1 = 1
-        <if test="dingdan.FId != null and dingdan.FId != ''">
-            AND u.f_id = #{dingdan.FId}
+        <if test="dingdan.fid != null and dingdan.fid != ''">
+            AND u.f_id = #{dingdan.fid}
         </if>
-        <if test="dingdan.FDate != null and dingdan.FDate != ''">
-            AND u.f_created_time = #{dingdan.FDate}
+        <if test="dingdan.fdate != null and dingdan.fdate != ''">
+            AND u.f_created_time = #{dingdan.fdate}
         </if>
-        <if test="dingdan.FSalesmanId != null and dingdan.FSalesmanId != ''">
-            AND u.f_salesman_id = #{dingdan.FSalesmanId}
+        <if test="dingdan.fsalesmanId != null and dingdan.fsalesmanId != ''">
+            AND u.f_salesman_id = #{dingdan.fsalesmanId}
         </if>
-        <if test="dingdan.FClientId != null and dingdan.FClientId != ''">
-            AND u.f_client_id = #{dingdan.FClientId}
+        <if test="dingdan.fclientId != null and dingdan.fclientId != ''">
+            AND u.f_client_id = #{dingdan.fclientId}
         </if>
-        <if test="dingdan.FPrice != null and dingdan.FPrice != ''">
-            AND u.f_sale_price = #{dingdan.FPrice}
+        <if test="dingdan.fprice != null and dingdan.fprice != ''">
+            AND u.f_sale_price = #{dingdan.fprice}
         </if>
-        <if test="dingdan.FStatus != null and dingdan.FStatus != ''">
-            AND u.f_status = #{dingdan.FStatus}
+        <if test="dingdan.fstatus != null and dingdan.fstatus != ''">
+            AND u.f_status = #{dingdan.fstatus}
         </if>
-        <if test="dingdan.FCarId != null and dingdan.FCarId != ''">
-            AND u.f_car_id = #{dingdan.FCarId}
+        <if test="dingdan.fcarId != null and dingdan.fcarId != ''">
+            AND u.f_car_id = #{dingdan.fcarId}
         </if>
         GROUP BY
         u.f_id,
@@ -73,19 +73,19 @@
         u.f_car_id
     </sql>
 
-    <select id="countDingdanDetail" parameterType="Dingdan" resultType="long">
+    <select id="countDingdanDetail" parameterType="dingdan" resultType="long">
         <include refid="countDingdanDetailSql"/>
     </select>
 
-    <select id="findDingdanDetailPage" parameterType="Dingdan" resultType="Dingdan">
+    <select id="findDingdanDetailPage" parameterType="dingdan" resultType="dingdan">
         <include refid="findDingdanDetailSql"/>
     </select>
 
-    <select id="findDingdanDetail" parameterType="Dingdan" resultType="Dingdan">
+    <select id="findDingdanDetail" parameterType="dingdan" resultType="dingdan">
         <include refid="findDingdanDetailSql"/>
     </select>
 
-    <select id="findById" parameterType="integer" resultType="Dingdan">
+    <select id="findById" parameterType="integer" resultType="dingdan">
         SELECT
         u.f_id,
         u.f_created_time,

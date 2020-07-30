@@ -4,6 +4,8 @@ import cc.mrbird.febs.common.entity.QueryRequest;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.Date;
+
 /**
  * @author MrBird
  */
@@ -20,8 +22,8 @@ public interface ICheliang extends IService<Cheliang> {
 
     public Cheliang findCheliangs(String FStructNum);
 
-    public void createCheliang(Cheliang user,String FStructNumber,Integer FCareCounts,String FColor,String FDrive,
-                               String FInsure,Integer FMinPrice,String FOther, String FPart,String FTurbo,String FType,
-                               Integer FWeight,String FVolume);
+    public void createCheliang(Cheliang user, String FStructNumber, Integer FCareCounts, String FColor, String FDrive,
+                               String FInsure, Integer FMinPrice, String FOther, String FPart, String FTurbo, String FType,
+                               Integer FWeight, String FVolume, Date FDate);
 
 }

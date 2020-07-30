@@ -65,8 +65,7 @@ public class CheliangImpl extends ServiceImpl<CheliangMapper, Cheliang> implemen
     @Transactional(rollbackFor = Exception.class)
     public void createCheliang(Cheliang user,String FStructNumber,Integer FCareCounts,String FColor,String FDrive,
                                String FInsure,Integer FMinPrice,String FOther, String FPart,String FTurbo,String FType,
-                               Integer FWeight,String FVolume) {
-        user.setFDate(new Date());
+                               Integer FWeight,String FVolume,Date FDate) {
         user.setFStructNumber(FStructNumber);
         user.setFCareCounts(FCareCounts);
         user.setFColor(FColor);
@@ -79,6 +78,7 @@ public class CheliangImpl extends ServiceImpl<CheliangMapper, Cheliang> implemen
         user.setFType(FType);
         user.setFWeight(FWeight);
         user.setFVolume(FVolume);
+        user.setFDate(FDate);
         save(user);
     }
 }

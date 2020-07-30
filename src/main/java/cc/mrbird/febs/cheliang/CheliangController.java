@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -35,7 +36,7 @@ public class CheliangController extends BaseController {
 
     @GetMapping
     @RequiresPermissions("cheliang:view")
-    public FebsResponse jobList(QueryRequest request, Cheliang che) {
+    public FebsResponse cheList(QueryRequest request, Cheliang che) {
         Map<String, Object> dataTable = getDataTable(this.che.findCheliangs(request, che));
         return new FebsResponse().success().data(dataTable);
     }
@@ -43,8 +44,11 @@ public class CheliangController extends BaseController {
     @PostMapping
     @RequiresPermissions("cheliang:add")
     @ControllerEndpoint(operation = "新增汽车车辆", exceptionMessage = "新增车辆失败")
-    public FebsResponse addChe(@Valid Cheliang che) {
-        this.che.createCheliang(che,FStructNumber);
+    public FebsResponse addChe(@Valid Cheliang user, String FStructNumber, Integer FCareCounts, String FColor,
+                               String FDrive, String FInsure, Integer FMinPrice, String FOther, String FPart, String FTurbo,
+                               String FType, Integer FWeight, String FVolume, Date FDate) {
+        this.che.createCheliang(user,FStructNumber,FCareCounts,FColor,FDrive, FInsure,FMinPrice,FOther,FPart,FTurbo,
+                FType, FWeight,FVolume,FDate);
         return new FebsResponse().success();
     }
 }

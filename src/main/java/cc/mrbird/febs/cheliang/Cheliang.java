@@ -48,7 +48,7 @@ public class Cheliang implements Serializable {
     /**
      * 汽车 ID
      */
-    @TableId(value = "f_car_id", type = IdType.AUTO)
+    @TableId(value = "f_id", type = IdType.AUTO)
     private Long FId;
 
     /**

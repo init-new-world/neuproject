@@ -18,7 +18,7 @@ import javax.validation.constraints.NotBlank;
  * @author MrBird
  */
 @Controller("dingdanView")
-@RequestMapping(FebsConstant.VIEW_PREFIX + "dingdan")
+@RequestMapping(FebsConstant.VIEW_PREFIX)
 @RequiredArgsConstructor
 public class ViewController {
 

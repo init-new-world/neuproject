@@ -27,7 +27,7 @@ public interface DingdanMapper extends BaseMapper<Dingdan> {
      */
     <T> IPage<Dingdan> findDingdanDetailPage(Page<T> page, @Param("dingdan") Dingdan che);
 
-    long countUserDetail(@Param("dingdan") Dingdan che);
+    long countDingdanDetail(@Param("dingdan") Dingdan che);
 
     /**
      * 查找车辆详细信息

@@ -34,7 +34,7 @@ public class DingdanImpl extends ServiceImpl<DingdanMapper, Dingdan> implements 
     public IPage<Dingdan> findDingdans(QueryRequest request, Dingdan dingdan) {
         Page<Dingdan> page = new Page<>(request.getPageNum(), request.getPageSize());
         page.setSearchCount(false);
-        page.setTotal(baseMapper.countUserDetail(dingdan));
+        page.setTotal(baseMapper.countDingdanDetail(dingdan));
         SortUtil.handlePageSort(request, page, "FId", FebsConstant.ORDER_ASC, false);
         return this.baseMapper.findDingdanDetailPage(page,dingdan);
     }
